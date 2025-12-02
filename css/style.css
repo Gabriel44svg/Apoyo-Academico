@@ -159,78 +159,38 @@ footer {
     margin-top: auto;
 }
 
+/* ============================================
+    RESPONSIVE QUE MANTIENE DISEÑO ORIGINAL
+   ============================================ */
+
 @media (max-width: 900px) {
 
-    /* Header se coloca vertical */
+    /* Reducir header proporcionalmente */
     header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 10px;
+        padding: 10px 20px;
     }
 
     .logo {
-        height: 60px;
+        height: 55px;
     }
 
     .titulo-facultad {
         font-size: 1rem;
-        margin-top: 10px;
     }
 
-    /* Nav superior más compacto */
+    /* Menú superior más compacto pero igual */
     .top-nav {
-        justify-content: center;
-        padding: 10px 10px;
+        padding: 10px 20px;
     }
 
     .top-nav a {
-        margin: 10px;
+        margin-left: 18px;
         font-size: 0.85rem;
     }
 
-    /* Sidebar pasa arriba como menú vertical */
-    .main-container {
-        flex-direction: column;
-    }
-
+    /* Sidebar mantiene posición */
     .sidebar {
-        width: 100%;
-        min-height: auto;
-        border-bottom: 3px solid #D59F0F;
-    }
-
-    /* Submenú  */
-    .submenu {
-        position: static;
-        width: 100%;
-        display: none;
-        box-shadow: none;
-        background-color: rgba(40,40,40,0.95);
-        padding-left: 20px;
-    }
-
-    .menu-item:hover .submenu {
-        display: block;
-    }
-
-    /* Contenido ocupa todo */
-    .info-box {
-        width: 95%;
-        padding: 25px;
-        font-size: 0.95rem;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .logo {
-        height: 48px;
-    }
-
-    .top-nav a {
-        font-size: 0.8rem;
-        margin: 6px;
+        width: 200px;       /* más estrecho para que quepa */
     }
 
     .menu-item {
@@ -238,18 +198,73 @@ footer {
         font-size: 0.9rem;
     }
 
+    .submenu {
+        width: 180px;       /* ajuste para que no se salga */
+    }
+
     .submenu a {
         font-size: 0.85rem;
-        padding: 10px;
+        padding: 10px 12px;
+    }
+
+    /* Contenido se adapta sin cambiar posición */
+    .info-box {
+        width: 80%;
+        padding: 30px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ============================================
+    RESPONSIVE EXTRA PARA PANTALLAS PEQUEÑAS
+   ============================================ */
+
+@media (max-width: 600px) {
+
+    /* Ajustes mínimos sin cambiar layout */
+    .logo {
+        height: 45px;
+    }
+
+    header {
+        padding: 8px 10px;
+    }
+
+    .top-nav {
+        padding: 8px 10px;
+    }
+
+    .top-nav a {
+        margin-left: 12px;
+        font-size: 0.78rem;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .menu-item {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .submenu {
+        width: 160px;
+    }
+
+    .submenu a {
+        font-size: 0.8rem;
+        padding: 8px 10px;
     }
 
     .info-box {
+        width: 85%;
         padding: 20px;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
     footer {
         font-size: 0.8rem;
-        padding: 10px;
     }
 }
